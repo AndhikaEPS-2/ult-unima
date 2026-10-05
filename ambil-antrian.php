@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once __DIR__ . '/includes/functions.php';
 $pdo = getDB();
 $kategoriList = getKategoriList($pdo);
@@ -13,6 +13,7 @@ require_once __DIR__ . '/includes/header.php';
 
 <div class="page-wrap">
   <div class="form-card">
+    <a href="index.php" class="btn-back" title="Kembali ke Beranda"><i class="bi bi-arrow-left"></i></a>
     <h2>Ambil Nomor Antrian</h2>
     <p class="desc">Lengkapi data di bawah ini untuk mendapatkan nomor antrian Anda.</p>
 

@@ -319,3 +319,13 @@ footer.site-footer { text-align: center; padding: 26px; color: #6b7280; font-siz
   .admin-shell { flex-direction: column; }
   .admin-sidebar { width: 100%; }
 }
+
+.form-card { position: relative; }
+.btn-back {
+  position: absolute; top: 30px; left: 30px; width: 42px; height: 42px;
+  border-radius: 50%; background: var(--blue-cyan); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; box-shadow: 0 4px 10px rgba(56,189,248,0.4);
+  transition: transform .15s, background .2s;
+}
+.btn-back:hover { background: var(--navy-dark); transform: translateX(-3px); }
