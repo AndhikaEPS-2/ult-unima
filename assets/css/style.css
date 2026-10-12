@@ -310,12 +310,49 @@ table.data-table th { background: var(--navy); color: #fff; }
 
 footer.site-footer { text-align: center; padding: 26px; color: #6b7280; font-size: .85rem; background: #fff; border-top: 1px solid #eee; }
 
+/* ---------- RESPONSIVE (HP) ---------- */
 @media (max-width: 860px) {
-  .navbar { padding: 12px 18px; }
-  .nav-links { position: fixed; top: 66px; left: 0; right: 0; background: var(--navy-dark); flex-direction: column; padding: 10px; display: none; }
+
+  /* Header lebih kecil */
+  .navbar { padding: 8px 12px; }
+  .navbar .brand { font-size: .85rem; gap: 8px; line-height: 1.2; }
+  .navbar .brand img { height: 32px; width: 32px; }
+  .nav-right { gap: 8px; }
+  .btn-login { padding: 6px 16px; font-size: .75rem; }
+  .avatar-circle { width: 30px; height: 30px; font-size: .95rem; }
+  .hamburger { display: block; font-size: 1.3rem; }
+
+  /* Menu jadi dropdown kecil di kanan, bukan selebar layar */
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: auto;
+    width: 150px;
+    background: var(--navy-dark);
+    flex-direction: column;
+    gap: 0;
+    padding: 6px 0;
+    border-radius: 0 0 0 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    display: none;
+  }
   .nav-links.open { display: flex; }
-  .hamburger { display: block; }
-  .hero h1 { font-size: 2rem; }
+  .nav-links a {
+    padding: 9px 16px;
+    border-radius: 0;
+    font-size: .8rem;
+    font-weight: 600;
+  }
+
+  /* Beranda lebih kecil */
+  .hero { padding: 40px 20px 20px; }
+  .hero .greet { font-size: 1.4rem; }
+  .hero h1 { font-size: 1.5rem; }
+  .hero .tagline { font-size: .85rem; margin-bottom: 30px; }
+  .btn-cta { font-size: 1rem; padding: 16px 36px; border-radius: 14px; }
+
+  /* Admin tetap seperti sebelumnya */
   .admin-shell { flex-direction: column; }
   .admin-sidebar { width: 100%; }
 }
