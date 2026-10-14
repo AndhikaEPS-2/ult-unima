@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/includes/functions.php';
-
+$pdo = getDB();  
 /**
  * Ambil teks nomor tiket dari satu baris tabel antrian.
  * Mencoba beberapa kemungkinan nama kolom supaya tidak error.
