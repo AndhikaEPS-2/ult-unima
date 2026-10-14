@@ -100,7 +100,7 @@ $layanan = [
 
   </div>
 
-  <!--
+
   OPSIONAL: Bagian kontak. Hapus tanda komentar ini lalu isi data yang benar.
 
   <section style="margin-top:40px;">
@@ -111,10 +111,7 @@ $layanan = [
   </section>
   -->
 
-  <div class="tentang-cta">
-    <p>Tidak perlu antre fisik. Ambil nomor antrian Anda secara online.</p>
-    <a href="ambil.php" class="btn-cta">Ambil Nomor Antrian</a>
-  </div>
+
 
 </main>
 
