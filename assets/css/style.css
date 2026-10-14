@@ -366,3 +366,26 @@ footer.site-footer { text-align: center; padding: 26px; color: #6b7280; font-siz
   transition: transform .15s, background .2s;
 }
 .btn-back:hover { background: var(--navy-dark); transform: translateX(-3px); }
+
+/* ---------- PANEL SEDANG DIPANGGIL ---------- */
+.now-serving {
+  margin: 0 0 28px;
+  padding: 16px 20px;
+  background: #fff;
+  border-left: 6px solid var(--indigo);
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  display: inline-block;
+}
+.now-serving[hidden] { display: none; }
+.now-label { display: block; font-size: .75rem; font-weight: 700; letter-spacing: 1.5px; color: #6b7280; margin-bottom: 8px; }
+.now-chips { display: flex; gap: 10px; flex-wrap: wrap; }
+.now-chips .chip { background: var(--navy-dark); color: #fff; font-weight: 800; font-size: 1.6rem; padding: 6px 18px; border-radius: 12px; }
+
+.stat-box .value.flash { animation: flash .8s ease; }
+@keyframes flash { 0% { transform: scale(1.15); color: #fde68a; } 100% { transform: scale(1); } }
+
+@media (max-width: 860px) {
+  .now-serving { display: block; }
+  .now-chips .chip { font-size: 1.2rem; padding: 5px 14px; }
+}
