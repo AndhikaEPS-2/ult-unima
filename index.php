@@ -106,7 +106,7 @@ include __DIR__ . '/includes/header.php';
 </section>
 
 <div class="cta-wrap">
-  <a href="ambil_antrian.php" class="btn-cta">Ambil Nomor Antrian</a>
+  <a href="ambil-antrian.php" class="btn-cta">Ambil Nomor Antrian</a>
 </div>
 
 <div class="stats-bar">
