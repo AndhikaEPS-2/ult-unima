@@ -65,7 +65,7 @@ function getAntrianSedangDilayani(PDO $pdo): ?array
     $stmt = $pdo->query(
         "SELECT a.*, k.kode_prefix FROM antrian a
          JOIN kategori_layanan k ON k.id = a.kategori_id
-         WHERE a.status = 'dipanggil' AND a.tanggal_antrian = CURDATE()
+         WHERE a.status IN ('dipanggil','dilayani') AND a.tanggal_antrian = CURDATE()
          ORDER BY a.dipanggil_at DESC LIMIT 1"
     );
     $row = $stmt->fetch();
