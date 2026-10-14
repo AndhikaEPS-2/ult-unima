@@ -16,23 +16,30 @@ require_once __DIR__ . '/includes/header.php';
   <h1>Di Sistem Informasi Layanan Digital</h1>
   <p class="tagline">Layanan Lebih Mudah, Antrian Lebih Teratur.</p>
 </section>
-
+<div class="now-serving" id="nowServing" hidden>
+  <span class="now-label">SEDANG DIPANGGIL</span>
+  <div class="now-chips" id="nowChips"></div>
+</div>
 <div class="cta-wrap">
   <a href="ambil-antrian.php"><button class="btn-cta">Ambil Nomor Antrian</button></a>
 </div>
 
+<?php
+$sedang   = getAntrianSedangDilayani($pdo);
+$menunggu = getTotalMenunggu($pdo);
+?>
 <div class="stats-bar">
   <div class="stat-box">
     <h4>JAM LAYANAN</h4>
-    <div class="value"><?= e($pengaturan['jam_buka_senin_kamis'] ?? '08:00') ?>-<?= e($pengaturan['jam_tutup_senin_kamis'] ?? '16:00') ?></div>
+    <div class="value">08:00-16:00</div>
   </div>
   <div class="stat-box">
     <h4>SEDANG DI LAYANI</h4>
-    <div class="value" id="stat-sedang-dilayani"><?= $sedang ? e($sedang['nomor_tiket']) : '-' ?></div>
+    <div class="value" id="stat-dilayani"><?= $sedang ? e($sedang['nomor_tiket']) : '-' ?></div>  <!-- GANTI jika berbeda -->
   </div>
   <div class="stat-box">
     <h4>Total Menunggu</h4>
-    <div class="value" id="stat-total-menunggu"><?= $totalMenunggu ?></div>
+    <div class="value" id="stat-menunggu"><?= $menunggu ?></div>
   </div>
 </div>
 
